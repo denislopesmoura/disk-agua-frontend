@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery de bebidas - Disk Água</title>
+
+    <!--Bootstrap core CSS-->
+    <link rel="stylesheet" href="/www/lib/node_modules/bootstrap/compile/bootstrap.css">
+    <link rel="stylesheet" href="/www/lib/node_modules/bootstrap/compile/index.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="py-5 text-center">
+          <a href="/www/templates/html/index.html"><img class="d-block mx-auto mb-4" src="/www/img/man.svg" alt="" width="120" height="120"></a>
+          <h2>Seja um Cliente</h2>
+          <p class="lead">Preencha os dados abaixo para abrir sua conta</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10 col-lg-8">
+                <form>
+                    <div class="form-row">
+
+                        <div class="form-group col-sm-6">
+                            <label for="inputFisrtName">Nome</label>
+                            <input type="text" class="form-control" id="inputNome" placeholder="Seu nome">
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label for="inputLastName">Sobrenome</label>
+                            <input type="text" class="form-control" id="inputSobrenome" placeholder="Seu sobrenome">
+                        </div>
+
+                        <div class="form-group col-sm-7">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Exemplo@exemplo.com">
+                        </div>
+
+                        <div class="form-group col-sm-5">
+                            <label for="inputBirthDate">Data de Nascimento</label>
+                            <input type="date" class="form-control" id="inputBirthDate" placeholder="Data de Nascimento">
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label for="inputCPF">CPF</label>
+                            <input type="text" class="form-control" id="inputCPF" placeholder="000.000.000 - 00">
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label for="inputPhone">Celular (com DDD)</label>
+                            <input type="tel" class="form-control" id="inputPhone" placeholder="(00) 0000 - 0000">
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label for="inputPassword">Senha</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Sua senha">
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label for="inputConfimationPassword"> Confirmar senha</label>
+                            <input type="password" class="form-control" id="inputConfimationPassword" placeholder="Repita a senha">
+                        </div>
+
+                    </div>
+
+                    <hr class="mb-4">
+                    
+                    <div class="form-row">
+                        <h4 >Endereço</h4>
+                    </div>
+
+                    <div class="form-row mt-3">
+
+                        <div class="form-group col-sm-4">
+                            <label for="inputCEP">CEP</label>
+                            <input type="text" class="form-control" id="inputCEP" placeholder="000.000 - 000">
+                        </div>
+
+                        <div class="form-group col-sm-8">
+                            <label for="inputRua">Rua</label>
+                            <input type="text" class="form-control" id="inputRua" placeholder="Conde da Boa Vista">
+                        </div>
+
+                        <div class="form-group col-sm-2">
+                            <label for="inputNumber">Número</label>
+                            <input type="text" class="form-control" id="inputNumber" placeholder="Ex: 71">
+                        </div>
+
+                        <div class="form-group col-sm-10">
+                            <label for="inputComplement">Complemento</label>
+                            <input type="text" class="form-control" id="inputComplement" placeholder="Próximo ao supermercado...">
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label for="selectState">Estado</label>
+                            <select class="custom-select d-block w-100" id="selectState" required>
+                                <option value="" selected >Selecione uma opção</option>
+                                <option>Pernambuco</option>
+                                <option>Rio de Janeiro</option>
+                              </select>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label for="selectCity">Cidade</label>
+                            <select class="custom-select d-block w-100" id="selectCity" required>
+                                <option value="" selected >Selecione uma opção</option>
+                                <option>Recife</option>
+                                <option>Jaboatão dos Guararapes</option>
+                                <option>São Lourenço da Mata</option>
+                              </select>
+                        </div>
+
+                    </div>
+
+                    <hr class="mb-8 mt-4">
+                    <a class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#confirmationRegistrer">Criar conta</a>
+
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="confirmationRegistrer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="py-5 text-center">
+                        <img class="d-block mx-auto mb-4" src="/www/img/man-happy.svg" alt="" width="120" height="120">
+                        <h2>Sua conta foi criada!</h2>
+                        <p class="lead">Você está a um clique de conferir nossas ofertas.</p>
+                        <a class="btn btn-primary btn-lg" href="/www/templates/html/sign-in.html">Entrar</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2017-2020 Disk Água</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Privacy</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+          </footer>
+    
+    </div>
+    
+
+
+    <!--Bootstrap core Js-->
+    <script src="/www/lib/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/www/lib/node_modules/popper.js/dist/popper.js"></script>
+    <script src="/www/lib/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
