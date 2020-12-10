@@ -1,0 +1,16 @@
+.error-validation{
+    color: red;
+    position: absolute;
+    top: 70px;
+    bottom: 50px;
+    font-size: .8rem;
+}
+
+.template{
+    display: none;
+}
+
+.error-input
+{
+ border:1px solid red;
+}
