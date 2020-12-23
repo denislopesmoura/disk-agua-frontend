@@ -208,7 +208,7 @@ exports.validate = function(email)
 var cpf = require("../../lib/node_modules/cpf-cnpj-validator");
 var email = require("../../lib/node_modules/email-validator");
 
-
+//
 const createUserURL = 'http://localhost:8080/diskagua/api/v1/usuarios';
 
 //Classe para validação dos campos do formulário de registro
@@ -283,7 +283,7 @@ class Validator{
         if(input.value == ""){
             this.printMessage(input, "Campo mandatório");
             input.classList.add("error-input");
-        }else if(cpf.cpf.isValid(input.value) == false){
+        }else if(input.value.length <= 2){
             this.printMessage(input,"CPF inválido");
             input.classList.add("error-input");
         }
@@ -363,7 +363,7 @@ btnSubmit.addEventListener('click', function(evt){
     if(validator.validate(form) == true){
 
         //envia os dados para o servidor criar o usuário no bd
-        fetch(createUserURL,{
+        /*fetch(createUserURL,{
             method: 'POST',
             body: JSON.stringify(userData)
         })
@@ -375,7 +375,9 @@ btnSubmit.addEventListener('click', function(evt){
 
             //recebe o JSON de resposta e infoma ao usuário o status da criação da conta.
             alert('cadastro realizado com sucesso');
-        })
+        })*/
+
+        $('#confirmationRegistrer').modal()
         
         
 

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+
+    <!--Bootstrap core CSS-->
+    <link rel="stylesheet" href="/www/lib/node_modules/bootstrap/compile/bootstrap.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand h1" href="#">Disk Água</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="NavbarSite">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="NavbarSite">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Meus Pedidos</a>
+                </li>
+            
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Nome do Usuário</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/www/templates/html/client/personal-area.html">Meus Dados</a>
+                      <a class="dropdown-item" href="/www/templates/html/index.html">Sair</a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+      </div>
+
+    </nav>
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Procure por lojas</h1>
+            <p class="lead text-muted">Encontre um depósito mais perto de você.</p>
+            <p class="row justify-content-md-center">
+                <input type="text" class="form-control col-8" id="inputNome" placeholder="Pesquise por nome ou cidade.">
+                <button type="button" class="btn btn-sm btn-outline-secondary col-2 ml-2">Buscar</button>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="ml-5">
+        <h4 class="my-5"> Lojas mais próximas de você</h4>
+      </div>
+
+      <!-- contem os cards com as lojas.-->
+      <div id="Stores" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mx-5">
+        <div class="col">
+
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+            <div class="card-body">
+              <a id="store-title-link" href="#"><p id="store-title" class="card-text h5 mb-2">Nome da loja</p></a>
+              <p id="store-description" class="card-tex">Descrição da loja</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">1,2 km</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="store-detail-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">Nome da Loja</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+              <h5 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Produtos</span>
+              </h5>
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                  <div>
+                    <h6 class="my-0">Produto 01</h6>
+                    <small class="text-muted">R$ 25,00</small>
+                  </div>
+                  <div id="button-address-edit" class="d-flex justify-content-between align-items-center">
+                    <button id="btn-addrees-edit" type="button" class="btn btn-sm btn-outline-secondary">Adicionar</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy; 2020 Disk Água</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacidade</a></li>
+        <li class="list-inline-item"><a href="#">Termos</a></li>
+        <li class="list-inline-item"><a href="#">Suporte</a></li>
+      </ul>
+    </footer>
+       
+
+
+
+    <!--Bootstrap core Js-->
+    <script src="/www/lib/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/www/lib/node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="/www/lib/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/www/templates/js/client/client-homepage.js"></script>
+    
+</body>
+</html>
